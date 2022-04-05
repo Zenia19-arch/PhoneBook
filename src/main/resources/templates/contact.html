@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Contact</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous">
+</head>
+<body>
+<header th:insert="blocks/navbar :: navbar"></header>
+
+<div class="container flex">
+
+    <div class="data_container_lg">
+
+        <div th:each="el : ${contact}">
+            <div class="row g-0">
+                <div style="display: contents;">
+
+                    <div th:if="${el.photo}" class="box_img">
+                        <img th:src="'/img/' + ${el.photo}" class="img-fluid rounded-start">
+                    </div>
+
+                </div>
+                <div class="col-md-8">
+                    <div class="contact_box">
+                        <h5 class="card-title" th:text="${el.name} + ' ' + ${el.lastname} "/>
+                        <hr>
+                        <div class="flex">
+                            <span>Home telephone number:</span>
+                            <p class="card-text" th:text="${el.homephone}"/>
+                        </div>
+                        <div class="flex">
+                            <span>Business phone number:</span>
+                            <p class="card-text" th:text="${el.businessphone}"/>
+                        </div>
+                        <div class="flex">
+                            <span>Email:</span>
+                            <p class="card-text" th:text="${el.email}"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex mt-4">
+            <a th:href="'/edit/' + ${id}" class="btn btn-primary">Edit contact</a>
+            <a th:href="'/delete/' + ${id}" class="btn btn-delete">Delete contact</a>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

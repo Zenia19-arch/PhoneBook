@@ -1,0 +1,71 @@
+<!--<div th:fragment="navbar">-->
+<!--    <nav class="navbar navbar-expand-lg navbar-light fixed-top">-->
+<!--        <div class="container-fluid main_container">-->
+
+<!--            <a class="navbar-brand left_container" style="margin-right: 0; font-size: 0;" href="/">-->
+<!--                <div class="flex_container">-->
+<!--                    <h5 class="logo_text_md">InfoCenter</h5>-->
+<!--                </div>-->
+<!--            </a>-->
+<!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--            </button>-->
+<!--            <button class="btn btn-outline-success me-2" type="button">Main button</button>-->
+
+<!--            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: space-between; padding-left: 0.2rem;">-->
+
+<!--                <div>adfdsfasdfasdfasd</div>-->
+<!--                <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+<!--                    <li class="nav-item dropdown">-->
+<!--                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                            [[${#httpServletRequest.remoteUser}]]-->
+<!--                        </a>-->
+<!--                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
+<!--                            <li><form th:action="@{/logout}" method="post" style="margin: auto;">-->
+<!--                                <button type="submit" class="btn btn-primary btn-sm">Sign Out</button>-->
+<!--                            </form></li>-->
+<!--                            <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--                            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </nav>-->
+<!--</div>-->
+
+
+<div th:fragment="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container container-fluid">
+            <a class="main_font navbar-brand me-md-5" href="/">PhoneBook</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+
+                <div class="container-fluid justify-content-start">
+                    <a class="btn btn-primary btn-sm btn-outline-success me-2" href="/add" role="button">Add contact</a>
+                </div>
+<!--                <form class="container-fluid justify-content-start">-->
+<!--                    <button class="btn btn-primary btn-sm btn-outline-success me-2" type="button">Add contact</button>-->
+<!--                </form>-->
+
+                <ul class="navbar-nav ">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            [[${#httpServletRequest.remoteUser}]]
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <form th:action="@{/logout}" method="post" style="margin: 0.25rem 1rem;">
+                                    <button type="submit" class="btn btn-primary btn-sm">Sign Out</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
