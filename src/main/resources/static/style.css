@@ -1,3 +1,199 @@
-p{
-    font-size: 30px;
+body{
+    background-color: #F8F8F8 !important;
+}
+
+.container{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+
+    display: flex;
+}
+
+.block{
+    display: block;
+}
+
+.flex{
+    display: flex;
+}
+
+
+.main_font{
+    font-family: "Fredoka One";
+    font-size: 18px;
+}
+
+.block_authorization{
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.text_center{
+    text-align: center;
+    font-size: 20px;
+}
+
+.data_container_sm{
+    width: 350px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.data_container_lg{
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.btn-primary{
+    background-color: #58C275 !important;
+    border-color: #58C275 !important;
+    color: white !important;
+}
+
+.btn-primary:hover{
+    color: #e7e6e6 !important;
+    background-color: #499f62 !important;
+    border-color: #499f62 !important;
+}
+
+.full_btn{
+    width: 100%;
+}
+
+.main_text{
+    color: #58C275;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+h5{
+    color: #262943;
+}
+
+a:hover{
+    color: #3c8a50 !important;
+}
+
+.text_md{
+    font-size: 15px;
+    text-align: center;
+}
+
+.background_main{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+.error{
+    text-align: center;
+    color: #D40E22;
+}
+
+.navbar{
+    background-color: #fff !important;
+}
+
+.btn-sm{
+    padding: 0.25rem 2rem !important;
+}
+
+.title_text{
+    font-size: 20px;
+    color: #262943;
+    font-weight: 500;
+
+    padding-bottom: 20px;
+}
+
+.title_subtext{
+    font-size: 14px;
+    color: #262943;
+    font-weight: 500;
+
+    padding-top: 5px;
+}
+
+#search{
+    background: url('https://www.flaticon.com/svg/vstatic/svg/3917/3917061.svg?token=exp=1648999829~hmac=392fab2828095babfbbd8a3c2426a2cb') no-repeat scroll 11px;
+    padding-left:36px;
+    background-size: 16px;
+}
+
+#user{
+    background: url("https://www.flaticon.com/svg/vstatic/svg/3917/3917688.svg?token=exp=1649000236~hmac=4a46618ac2b2bf1322e28f936ead4de0") no-repeat scroll 11px;
+    padding-left:36px;
+    background-size: 16px;
+}
+
+#password{
+    background: url("https://www.flaticon.com/svg/vstatic/svg/3917/3917591.svg?token=exp=1649000343~hmac=b0190cf43de1c45ea52377345470caf9") no-repeat scroll 11px;
+    padding-left:36px;
+    background-size: 16px;
+}
+
+#email{
+    background: url("https://www.flaticon.com/svg/vstatic/svg/3916/3916611.svg?token=exp=1649000582~hmac=0ed4e416cc498bcb70210e3f7176f0d9") no-repeat scroll 11px;
+    padding-left:36px;
+    background-size: 16px;
+}
+
+.box_img{
+    position: relative;
+    overflow:hidden;
+    width:250px;
+    height:250px;
+    border-radius: 5px;
+}
+
+.box_img img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:300px;
+    height:300px;
+    object-fit:cover;
+}
+
+.contact_box{
+    margin-left: 20px;
+}
+
+.contact_box span{
+    margin-bottom: 10px;
+    width: 40%;
+}
+
+.flex a:last-child{
+    width: 50%;
+    margin-left: 10px;
+}
+
+.flex a:first-child{
+    width: 50%;
+    margin-right: 10px;
+}
+
+.btn-delete{
+    background-color: #D40E22 !important;
+    border-color: #D40E22 !important;
+    color: white !important;
+}
+
+.btn-delete:hover{
+    color: #e7e6e6 !important;
+    background-color: #a40f1e !important;
+    border-color: #a40f1e !important;
 }
