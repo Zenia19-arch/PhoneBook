@@ -40,6 +40,7 @@ public class AuthorizationController {
                          BindingResult bindingResult,
                          Model model){
 
+        // Checking for validation of registration fields
         boolean isConfirmEmpty = StringUtils.isEmpty(password_confirm);
         if(isConfirmEmpty){
             model.addAttribute("password2Error", "Password confirmation cannot be empty");
